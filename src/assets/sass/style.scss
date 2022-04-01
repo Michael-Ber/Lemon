@@ -1,0 +1,27 @@
+@import './blocks/header';
+@import './blocks/section1';
+@import './blocks/section2';
+@import './blocks/section3';
+@import './blocks/section4';
+@import './blocks/section5';
+
+* {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #eaeaea;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.line {
+    height: 2px;
+    background-color: rgba(#555, .2);
+}
