@@ -1,0 +1,77 @@
+.modal__login, .modal__sign-in {
+    width: 328px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 19px 32px 23px 25px;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.15);
+    &--title {
+        margin-top: 30px;
+    }
+    &--form {
+        margin-top: 23px;
+    }
+    &--input {
+        & + & {
+            margin-top: 20px;
+        }
+    }
+    &--pswd {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+    }
+    &--forget-pswd {
+        @include josefin;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 400;
+        font-style: italic;
+        color: rgba(#000000, .54);
+        padding-left: 5px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    &--btn {
+        margin: 30px auto 0 auto;
+    }
+    &--socials {
+        margin-top: 20px;
+    }
+    &--link {
+        & + & {
+            margin-left: 20px;
+        }
+    }
+    &--sign-in {
+        @include josefin;
+        display: block;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 400;
+        font-style: italic;
+        margin-top: 15px;
+        color: rgba(#000000, .54);
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+.modal__sign-in {
+    margin-top: 20px;
+    &--terms {
+        @include josefin;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 400;
+        font-style: italic;
+        margin-top: 15px;
+        color: rgba(#000000, .54);
+        text-decoration: none;
+        cursor: pointer;
+        &-link {
+            text-decoration: underline;
+            color: #002dd6;
+        }
+    }
+}

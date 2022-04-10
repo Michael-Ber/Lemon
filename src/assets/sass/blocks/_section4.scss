@@ -13,7 +13,7 @@
         background: url('./assets/img/section_4/404.jpg') center center/cover no-repeat, #fff;
         padding: 20px 45px 52px 45px;
         &-page {
-            font-family: 'Josefin Sans', sans-serif;
+            @include josefin;
             font-size: 20px;
             font-weight: 400;
             color: #000000;
@@ -35,8 +35,8 @@
             margin-top: 40px;
         }
         &-text {
+            @include playfair;
             width: 130px;
-            font-family: 'Playfair Display', serif;
             font-size: 16px;
             font-weight: 900;
             text-align: center;
@@ -45,28 +45,20 @@
             line-height: 1.2;
         }
         &-sorry {
-            font-family: 'Josefin Sans', sans-serif;
+            @include josefin;
             font-size: 34px;
             font-weight: 700;
             color: #000000;
         }
         &-smile {
+            @include playfair;
             font-size: 34px;
             transform: rotate(75deg) translateY(-5px);
-            font-family: 'Playfair Display', serif;
             color: #a9a9a9;
             margin-top: 5px;
         }
         &-button {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 12px;
-            line-height: 1.1;
-            font-weight: 300;
-            color: #000000;
             align-self: center;
-            padding: 9px 37px;
-            border: 1px solid #c2c2c2;
-            cursor: pointer;
         }
     }
     &__author {
@@ -76,7 +68,7 @@
         background-color: #ffffff;
         box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.15);
         &-page {
-            font-family: 'Josefin Sans', sans-serif;
+            @include josefin;
             font-size: 20px;
             font-weight: 400;
             color: #000000;
@@ -109,14 +101,14 @@
             margin-left: 19px;
         }
         &-name {
-            font-family: 'Josefin Sans', sans-serif;
+            @include josefin;
             font-size: 24px;
             font-weight: 700;
             color: #000000;
             margin-top: 15px;
         }
         &-country {
-            font-family: 'Josefin Sans', sans-serif;
+            @include josefin;
             font-size: 16px;
             font-weight: 300;
             color: #000000;
@@ -141,7 +133,7 @@
             }
         }
         &-title {
-            font-family: 'Josefin Sans', sans-serif;
+            @include josefin;
             font-size: 20px;
             font-weight: 400;
             font-style: italic;
@@ -149,7 +141,7 @@
             margin-top: 25px;
         }
         &-text {
-            font-family: 'Josefin Sans', sans-serif;
+            @include josefin;
             font-size: 14px;
             font-weight: 300;
             font-style: italic;

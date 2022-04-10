@@ -1,9 +1,13 @@
+@import './components/mixins';
 @import './blocks/header';
 @import './blocks/section1';
 @import './blocks/section2';
 @import './blocks/section3';
 @import './blocks/section4';
 @import './blocks/section5';
+@import './blocks/modal-login';
+@import './blocks/postComment';
+@import './blocks/section8';
 
 * {
     margin: 0;  
@@ -24,4 +28,128 @@ body {
 .line {
     height: 2px;
     background-color: rgba(#555, .2);
+}
+
+.btn {
+    @include josefin;
+    display: block;
+    width: 105px;
+    text-align: center;
+    border: 1px solid #c2c2c2;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    padding: 9px 0;
+    text-transform: uppercase;
+}
+
+.details {
+    @include openSans;
+    display: flex;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #555555;
+    &-clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            display: flex;
+            margin-left: 2px;
+        }
+    }
+    &-comments {
+        display: flex;
+        margin-left: 6px;
+        span {
+            margin-left: 2px;
+        }
+    }
+    &-views {
+        display: flex;
+        margin-left: 6px;
+        span {
+            margin-left: 2px;
+        }
+    }
+}
+
+.modal--page {
+    i {
+        @include josefin;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #000000;
+        margin-left: 5px;
+    }
+    .modal--line {
+        width: 100%;
+        height: 2px;
+        margin: 0 auto; 
+        background-color: rgba(#555555, .2);
+        margin-top: 5px;
+    }
+}
+.modal--title {
+    @include josefin;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #000000;
+}
+.modal--form {
+    display: flex;
+    flex-direction: column;
+}
+.modal--input {
+    @include josefin;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: rgba(#000000, .8);
+    border: 1px solid #c2c2c2;
+    box-shadow: inset 1px 2px 7px 0px rgba(11,12,12,0.10);
+    padding: 14px 18px 10px;
+}
+.modal--label {
+    span {
+        @include josefin;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 400;
+        font-style: italic;
+        color: rgba(#000000, .54);
+        padding-left: 5px;
+        vertical-align: text-bottom;
+        cursor: pointer;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+.modal--btn {
+    @include josefin;
+    padding: 8px 34px;
+    border: 1px solid #c2c2c2;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.modal--socials {
+    text-align: center;
+}
+.modal--link {
+    text-align: center;
+    text-decoration: none;
 }
