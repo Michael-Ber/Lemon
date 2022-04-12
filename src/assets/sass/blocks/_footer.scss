@@ -1,4 +1,5 @@
 .footer {
+    max-height: 180px;
     padding: 72px 54px 55px 86px;
     background-color: rgba(#000000, .8);
     box-shadow: 0px 3px 7px 0px rgba(11,12,12,0.14);
@@ -17,10 +18,12 @@
 .footer__content-logo {
     width: 87px;
     height: 36px;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    a {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 }
 .footer__content-pages {
@@ -31,10 +34,12 @@
 }
 .footer__content-item {
     text-transform: uppercase;
-    & + & {
-        margin-left: 15px;
-    }
+    // padding: 7px;
+    // & + & {
+    //     margin-left: 15px;
+    // }
     a {
+        padding: 15px 7px;
         text-decoration: none;
         color: rgba(#fefefe, .5);
         &:hover {

@@ -9,6 +9,7 @@
 @import './blocks/postComment';
 @import './blocks/section8';
 @import './blocks/footer';
+@import './components/animation';
 
 * {
     margin: 0;  
@@ -34,7 +35,7 @@ body {
 .btn {
     @include josefin;
     display: block;
-    width: 105px;
+    min-width: 105px;
     text-align: center;
     border: 1px solid #c2c2c2;
     text-decoration: none;
@@ -42,6 +43,9 @@ body {
     font-size: 12px;
     padding: 9px 0;
     text-transform: uppercase;
+    &:hover {
+        border-color:darken(#c2c2c2, 20%);
+    }
 }
 
 .details {
@@ -153,4 +157,12 @@ body {
 .modal--link {
     text-align: center;
     text-decoration: none;
+}
+
+.logo {
+    transition: .2s all;
+    cursor: pointer;
+    &:hover {
+        transform: translateY(-3px);
+    }
 }

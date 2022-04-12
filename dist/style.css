@@ -1,3 +1,11 @@
+@keyframes widthRamp {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -14,17 +22,35 @@
 .header__logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
-.header__nav-item {
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.header__list-item + .header__list-item {
+  margin-left: 23px;
+}
+.header__list-item--link {
+  position: relative;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 300;
   color: #000;
   text-decoration: none;
 }
-.header__nav-item:nth-child(n):not(:last-child) {
-  margin-left: 23px;
+.header__list-item--link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(85, 85, 85, 0.5);
+  animation: widthRamp 0.3s;
 }
 .header__find-input {
   padding: 10px 30px 9px 50px;
@@ -50,7 +76,7 @@
 .icecream__logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .icecream__title {
   font-family: "Playfair Display", serif;
@@ -342,17 +368,15 @@
   align-items: flex-start;
   margin-top: 6px;
 }
-.author-404__author-socials a {
-  width: 20px;
-  height: 16px;
+.author-404__author-socials-item {
+  color: rgba(85, 85, 85, 0.5);
+  font-size: 16px;
 }
-.author-404__author-socials a:nth-child(n):not(:last-child) {
-  margin-right: 10px;
+.author-404__author-socials-item + .author-404__author-socials-item {
+  margin-left: 10px;
 }
-.author-404__author-socials img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.author-404__author-socials-item:hover {
+  color: #888888;
 }
 .author-404__author-title {
   font-family: "Josefin Sans", sans-serif;
@@ -957,6 +981,9 @@
   border: 1px solid #c2c2c2;
   margin-left: 5px;
 }
+.post-comment__content-btn:hover {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #444;
+}
 
 .comments {
   width: 838px;
@@ -1075,7 +1102,7 @@
   color: inherit;
 }
 .comments__post-item .card--meta-like {
-  margin-left: 10px;
+  margin-left: 5px;
   font-size: 12px;
 }
 .comments__post-item .card--meta-like-link {
@@ -1141,6 +1168,7 @@
 }
 
 .footer {
+  max-height: 180px;
   padding: 72px 54px 55px 86px;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0px 3px 7px 0px rgba(11, 12, 12, 0.14);
@@ -1162,10 +1190,10 @@
   width: 87px;
   height: 36px;
 }
-.footer__content-logo img {
+.footer__content-logo a img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .footer__content-pages {
@@ -1178,10 +1206,8 @@
 .footer__content-item {
   text-transform: uppercase;
 }
-.footer__content-item + .footer__content-item {
-  margin-left: 15px;
-}
 .footer__content-item a {
+  padding: 15px 7px;
   text-decoration: none;
   color: rgba(254, 254, 254, 0.5);
 }
@@ -1216,6 +1242,14 @@
   color: #888888;
 }
 
+@keyframes widthRamp {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -1239,7 +1273,7 @@ body {
 .btn {
   font-family: "Josefin Sans", sans-serif;
   display: block;
-  width: 105px;
+  min-width: 105px;
   text-align: center;
   border: 1px solid #c2c2c2;
   text-decoration: none;
@@ -1247,6 +1281,9 @@ body {
   font-size: 12px;
   padding: 9px 0;
   text-transform: uppercase;
+}
+.btn:hover {
+  border-color: #8f8f8f;
 }
 
 .details {
@@ -1361,4 +1398,12 @@ body {
 .modal--link {
   text-align: center;
   text-decoration: none;
+}
+
+.logo {
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.logo:hover {
+  transform: translateY(-3px);
 }

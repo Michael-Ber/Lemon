@@ -17,16 +17,28 @@
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
-                <div class="header__logo">
+                <div class="header__logo logo">
                     <img src="./assets/icons/logo.png" alt="logo">
                 </div>
                 <div class="header__nav">
                     <nav class="wrapper">
-                        <a href="#" class="header__nav-item">home</a>
-                        <a href="#" class="header__nav-item">recipes</a>
-                        <a href="#" class="header__nav-item">photo galleries</a>
-                        <a href="#" class="header__nav-item">videos</a>
-                        <a href="#" class="header__nav-item">all categories</a>
+                        <ul class="header__list">
+                            <li class="header__list-item">
+                                <a href="#" class="header__list-item--link">home</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#" class="header__list-item--link">recipes</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#" class="header__list-item--link">photo galleries</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#" class="header__list-item--link">videos</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#" class="header__list-item--link">all categories</a>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
                 <div class="header__find">
@@ -217,10 +229,18 @@
                             <div class="author-404__author-name">Karen Gray</div>
                             <div class="author-404__author-country">United States</div>
                             <div class="author-404__author-socials">
-                                <a href="#"><img src="./assets/icons/google.png" alt="google"></a>
-                                <a href="#"><img src="./assets/icons/pinterest.png" alt="twitter"></a>
-                                <a href="#"><img src="./assets/icons/facebook.png" alt="facebook"></a>
-                                <a href="#"><img src="./assets/icons/pinterest.png" alt="pinterest"></a>
+                                <a href="#" class="author-404__author-socials-item">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="author-404__author-socials-item">
+                                    <i class='fa fa-twitter fa-lg'></i>
+                                </a>
+                                <a href="#" class="author-404__author-socials-item">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="author-404__author-socials-item">
+                                    <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                </a>
                             </div>
                             <div class="author-404__author-line author-404__author-line_small"></div>
                             <h2 class="author-404__author-title">About Lemon</h2>
@@ -591,7 +611,7 @@
                 </label>
                 <a href="#" class="modal__login--forget-pswd">Forgot your password ?</a>
             </div>
-            <a href="" class="modal__login--btn modal--btn">Login</a>
+            <a href="" class="modal__login--btn modal--btn btn">Login</a>
             
         </form>
         <div class="modal__login--socials modal--socials">
@@ -616,7 +636,7 @@
             <input type="text" placeholder="username" class="modal__sign-in--input modal--input">
             <input type="text" placeholder="password" class="modal__sign-in--input modal--input">
             <input type="text" placeholder="repeat password" class="modal__sign-in--input modal--input">
-            <a href="" class="modal__sign-in--btn modal--btn">Sign up</a>
+            <a href="" class="modal__sign-in--btn modal--btn btn">Sign up</a>
         </form>
         <div class="modal__sign-in--socials modal--socials">
             <a href="#" class="modal__sign-in--link modal--link">
@@ -810,7 +830,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
-                <div class="footer__content-logo">
+                <div class="footer__content-logo logo">
                     <a href="#">
                         <img src="./assets/icons/logo_white.png" alt="logo">    
                     </a>
